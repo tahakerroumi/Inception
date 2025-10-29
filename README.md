@@ -113,3 +113,5 @@ A **container** is a **lightweight, runnable instance of a Docker image**.
 - It includes the application and all its dependencies, but runs **isolated from the host system**.
 - Containers are **ephemeral by default**, meaning changes inside the container do not modify the original image unless explicitly committed.
 - They share the host OS kernel but have **separate namespaces** for processes, filesystem, network, and more.
+
+<https://www.youtube.com/watch?v=EnJ7qX9fkcU>
