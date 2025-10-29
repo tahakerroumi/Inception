@@ -98,18 +98,12 @@ So now we can say **A Docker image** is a **read-only template** that contains e
 <img width="1000" height="500" alt="image" src="https://github.com/user-attachments/assets/fa0e039a-cb3a-430e-a538-9fb098934e78" />
 
 to build an image Use this command in the same directory as your Dockerfile:
-``` `docker build -t image_name .` - ✅ Explanation (short):
-
-
+``` 
+"docker build -t image_name ."
+- ✅ Explanation (short):
 docker build → builds an image.
-
-
 -t image_name → gives the image a name.
-
-
-. → means “use the current directory” as the build context.
-
-```
+. → means “use the current directory” as the build context.```
 
 
 ## What is a Container?
