@@ -40,6 +40,8 @@ To explain what a docker image is we should first know what a dockerfile is.
 Dockerfile is a plain text document that contains a series of instructions used by Docker to automatically build a container image. It acts as a blueprint or a recipe, defining the steps and commands required to create a reproducible and consistent environment for an application within a Docker container.
 
 In a Dockerfile everything on the left is **INSTRUCTION**, and on the right is an **ARGUMENT** to those instructions. Remember that the file name is `"Dockerfile"` without any extension.
+<img width="454" height="200" alt="image" src="https://github.com/user-attachments/assets/bb5b6624-c5a4-4c6b-9852-acaa6f294bb7" />
+
 
 ### Dockerfile Instructions
 
@@ -86,6 +88,9 @@ After processing all instructions:
 - Docker **combines all layers** into one **read-only image**.
 
 So now we can say **A Docker image** is a **read-only template** that contains everything needed to run an application: code, runtime, libraries, environment variables, and configuration files.
+<img width="968" height="284" alt="image" src="https://github.com/user-attachments/assets/c5d56205-fd0d-4c80-9b44-facdbf63389e" />
+<img width="1606" height="1008" alt="image" src="https://github.com/user-attachments/assets/fa0e039a-cb3a-430e-a538-9fb098934e78" />
+
 
 ## What is a Container?
 
