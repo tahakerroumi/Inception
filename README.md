@@ -3,7 +3,7 @@
 This project aims to broaden your knowledge of system administration through the use of Docker technology. You will virtualize several Docker images by creating them in your new personal virtual machine.
 
 
-<img width="300" height="300" alt="image" src="https://github.com/user-attachments/assets/71553ffe-6a9d-4398-96e2-df480ce545d1" />
+<img width="300" height="340" alt="image" src="https://github.com/user-attachments/assets/71553ffe-6a9d-4398-96e2-df480ce545d1" />
 
 
 ## Let's get started
@@ -92,8 +92,8 @@ After processing all instructions:
 - Docker **combines all layers** into one **read-only image**.
 
 So now we can say **A Docker image** is a **read-only template** that contains everything needed to run an application: code, runtime, libraries, environment variables, and configuration files.
-<img width="968" height="284" alt="image" src="https://github.com/user-attachments/assets/c5d56205-fd0d-4c80-9b44-facdbf63389e" />
-<img width="1606" height="1008" alt="image" src="https://github.com/user-attachments/assets/fa0e039a-cb3a-430e-a538-9fb098934e78" />
+<img width="454" height="284" alt="image" src="https://github.com/user-attachments/assets/c5d56205-fd0d-4c80-9b44-facdbf63389e" />
+<img width="1000" height="1008" alt="image" src="https://github.com/user-attachments/assets/fa0e039a-cb3a-430e-a538-9fb098934e78" />
 
 
 ## What is a Container?
