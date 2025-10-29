@@ -103,8 +103,8 @@ to build an image Use this command in the same directory as your Dockerfile:
 - ✅ Explanation (short):
 docker build → builds an image.
 -t image_name → gives the image a name.
-. → means “use the current directory” as the build context.```
-
+. → means “use the current directory” as the build context.
+```
 
 ## What is a Container?
 
