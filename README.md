@@ -1,6 +1,8 @@
 # Inception (Docker System Administration Project)
 
 This project aims to broaden your knowledge of system administration through the use of Docker technology. You will virtualize several Docker images by creating them in your new personal virtual machine.
+
+
 <img width="300" height="300" alt="image" src="https://github.com/user-attachments/assets/71553ffe-6a9d-4398-96e2-df480ce545d1" />
 
 
