@@ -267,7 +267,7 @@ Docker creates these networks using **Linux network namespaces** and **virtual E
 
 <img width="1000" height="500" alt="image" src="https://github.com/user-attachments/assets/c6120bf4-79eb-468b-bb53-f5c1e033e2f4" />
 
-good video: <https://www.youtube.com/watch?v=TSrW2tapx-8>
+[Youtube](https://www.youtube.com/watch?v=TSrW2tapx-8)
 
 **Last bot not least we will explain what docker-compose is:**
 
