@@ -192,6 +192,7 @@ So, when you do `docker run`, `dockerd` calls the **containerd API** to start a 
 🧠 You can think of `runc` as the **hands** — it's the program that directly calls the Linux kernel to isolate and start containers.
 
 <img width="2000" height="1256" alt="image" src="https://github.com/user-attachments/assets/2f2834fa-1c6b-46f7-80bc-269333c73739" />
+<img width="2567" height="1491" alt="image" src="https://github.com/user-attachments/assets/8a5311b1-d19e-4da4-b37d-ca8d1076aa05" />
 
 
 So to summarize:
@@ -309,7 +310,7 @@ docker-compose up
 
 ## 📚 Resources
 
-- [Docker Official Documentation](https://docs.docker.com/)
+- [How Docker Works](https://devopscube.com/what-is-docker/)
 - [Docker Hub](https://hub.docker.com/)
 - [Docker Compose Documentation](https://docs.docker.com/compose/)
 - [Open Container Initiative (OCI)](https://opencontainers.org/)
