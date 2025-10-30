@@ -1,7 +1,8 @@
 # Inception
 
-> A comprehensive guide to understanding Docker and containerization technology through system administration
-<img width="20" height="20" alt="image" src="https://github.com/user-attachments/assets/81d77a6a-58ec-4e5a-b656-11ffd1f63f67" /> <img width="20" height="20" alt="image" src="https://github.com/user-attachments/assets/c42fb22e-d73c-4c83-b39b-d23b651fcf0a" /> <img width="20" height="25" alt="image" src="https://github.com/user-attachments/assets/231fb3fa-69b9-4fd7-b5a7-583d154fbac0" />
+> A comprehensive guide to understanding Docker and containerization technology through system administration 
+
+<img width="100" height="50" alt="image" src="https://github.com/user-attachments/assets/81d77a6a-58ec-4e5a-b656-11ffd1f63f67" /> <img width="100" height="50" alt="image" src="https://github.com/user-attachments/assets/c42fb22e-d73c-4c83-b39b-d23b651fcf0a" /> <img width="100" height="50" alt="image" src="https://github.com/user-attachments/assets/231fb3fa-69b9-4fd7-b5a7-583d154fbac0" />
 
 
 
