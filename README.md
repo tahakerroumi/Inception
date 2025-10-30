@@ -109,7 +109,7 @@ After processing all instructions:
 
 So now we can say **A Docker image** is a **read-only template** that contains everything needed to run an application: code, runtime, libraries, environment variables, and configuration files.
 
-<img width="468" height="84" alt="image" src="https://github.com/user-attachments/assets/98d25238-65a9-4778-87f6-f0c678f0841e" /> <img width="560" height="108" alt="image" src="https://github.com/user-attachments/assets/86c3b7fe-2279-4493-9d07-9bf06f9854d2" />
+<img width="468" height="250" alt="image" src="https://github.com/user-attachments/assets/98d25238-65a9-4778-87f6-f0c678f0841e" /> <img width="560" height="700" alt="image" src="https://github.com/user-attachments/assets/86c3b7fe-2279-4493-9d07-9bf06f9854d2" />
 
 
 
@@ -267,7 +267,7 @@ Docker creates these networks using **Linux network namespaces** and **virtual E
 
 <img width="1000" height="500" alt="image" src="https://github.com/user-attachments/assets/c6120bf4-79eb-468b-bb53-f5c1e033e2f4" />
 
-[![Docker Networking](https://www.youtube.com/watch?v=TSrW2tapx-8)
+good video: <https://www.youtube.com/watch?v=TSrW2tapx-8>
 
 **Last bot not least we will explain what docker-compose is:**
 
