@@ -311,7 +311,7 @@ docker-compose up
 ## 📚 Resources
 
 - [How Docker Works](https://devopscube.com/what-is-docker/)
-- [Docker Hub](https://hub.docker.com/)
+- [Docker Deep Dive](http://103.203.175.90:81/fdScript/RootOfEBooks/E%20Book%20collection%20-%202024%20-%20D/CSE%20%20IT%20AIDS%20ML/Docker%20Deep%20Dive.pdf)
 - [Docker Compose Documentation](https://docs.docker.com/compose/)
 - [Open Container Initiative (OCI)](https://opencontainers.org/)
 - [containerd Documentation](https://containerd.io/)
