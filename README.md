@@ -63,6 +63,9 @@ Dockerfile is a plain text document that contains a series of instructions used 
 
 In a Dockerfile everything on the left is **INSTRUCTION**, and on the right is an **ARGUMENT** to those instructions. Remember that the file name is `"Dockerfile"` without any extension.
 
+<img width="454" height="200" alt="image" src="https://github.com/user-attachments/assets/0539eb9f-1670-4233-9d72-9c193c7107cc" />
+
+
 The following table contains the important **Dockerfile** instructions and their explanation.
 
 #### Dockerfile Instructions
@@ -102,10 +105,13 @@ CMD ["python3", "app.py"]# Layer 5 (metadata only)
 > 💡 If a line hasn't changed since the last build, Docker **reuses the cached layer** instead of rebuilding it — this makes builds faster.
 
 After processing all instructions:
-
 - Docker **combines all layers** into one **read-only image**.
 
 So now we can say **A Docker image** is a **read-only template** that contains everything needed to run an application: code, runtime, libraries, environment variables, and configuration files.
+
+<img width="468" height="84" alt="image" src="https://github.com/user-attachments/assets/98d25238-65a9-4778-87f6-f0c678f0841e" /> <img width="560" height="108" alt="image" src="https://github.com/user-attachments/assets/86c3b7fe-2279-4493-9d07-9bf06f9854d2" />
+
+
 
 ---
 
@@ -185,6 +191,9 @@ So, when you do `docker run`, `dockerd` calls the **containerd API** to start a 
 
 🧠 You can think of `runc` as the **hands** — it's the program that directly calls the Linux kernel to isolate and start containers.
 
+<img width="2000" height="1256" alt="image" src="https://github.com/user-attachments/assets/2f2834fa-1c6b-46f7-80bc-269333c73739" />
+
+
 So to summarize:
 
 > Docker is not one program.
@@ -217,6 +226,9 @@ When you attach a volume to a container, it **mounts a real directory from the h
 
 **Types of Docker Volumes:**
 
+<img width="1100" height="361" alt="image" src="https://github.com/user-attachments/assets/c3b1f632-456d-4495-a0dc-d216e63f095b" />
+
+
 in this project we will use only **named volumes.**
 
 ### **Named Volumes**
@@ -229,6 +241,9 @@ docker run -d --name my_container -v myVolume:/data node_container
 ```
 
 **Mounting Named Volumes**
+
+<img width="681" height="333" alt="image" src="https://github.com/user-attachments/assets/21ee3513-aa2e-48be-bd79-db985a73f715" />
+
 
 To mount a named volume to a container:
 
@@ -250,7 +265,9 @@ Docker provides **virtual networks** that allow containers to communicate secure
 
 Docker creates these networks using **Linux network namespaces** and **virtual Ethernet interfaces (veth pairs)**.
 
-[![Docker Networking](https://img.youtube.com/vi/TSrW2tapx-8/0.jpg)](https://www.youtube.com/watch?v=TSrW2tapx-8)
+<img width="1000" height="500" alt="image" src="https://github.com/user-attachments/assets/c6120bf4-79eb-468b-bb53-f5c1e033e2f4" />
+
+[![Docker Networking](https://www.youtube.com/watch?v=TSrW2tapx-8)
 
 **Last bot not least we will explain what docker-compose is:**
 
