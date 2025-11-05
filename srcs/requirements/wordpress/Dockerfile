@@ -1,24 +1,25 @@
 FROM debian:bullseye
 
 RUN apt-get update && apt-get install -y \
-    php-fpm \
-    php-mysql \
+    php7.4-fpm \
+    php7.4-mysql \
+    php7.4-curl \
+    php7.4-gd \
+    php7.4-intl \
+    php7.4-mbstring \
+    php7.4-soap \
+    php7.4-xml \
+    php7.4-xmlrpc \
+    php7.4-zip \
     curl \
-    mariadb-client \
-    php-curl \
-    php-xml \
-    php-json \
-    php-mbstring \
     && rm -rf /var/lib/apt/lists/*
 
-RUN sed -ri 's~^listen = .*~listen = 9000~g' /etc/php/*/fpm/pool.d/www.conf
+# Configure PHP-FPM
+RUN sed -i 's/listen = \/run\/php\/php7.4-fpm.sock/listen = 9000/g' /etc/php/7.4/fpm/pool.d/www.conf
 
-RUN mkdir -p /var/www/html
+COPY tools/setup_wordpress.sh /usr/local/bin/
+RUN chmod +x /usr/local/bin/setup_wordpress.sh
 
-RUN chown -R www-data:www-data /var/www/html
+EXPOSE 9000
 
-COPY ./tools/script.sh /tmp/script.sh
-
-RUN chmod +x /tmp/script.sh
-
-CMD [ "/tmp/script.sh" ]
+CMD ["setup_wordpress.sh"]

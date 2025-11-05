@@ -1,16 +1,19 @@
 FROM debian:bullseye
 
-RUN apt-get update && apt-get install nginx openssl -y \
+RUN apt-get update && apt-get install -y \
+    nginx \
+    openssl \
     && rm -rf /var/lib/apt/lists/*
 
-RUN openssl req -newkey rsa:2048 -nodes \
-    -keyout /etc/ssl/private/nginx.key -x509 \
-    -days 365 -out /etc/ssl/certs/nginx.crt \
-    -subj "/C=MA/ST=BE/O=1337/CN=tkerroum.42.fr"
+# Generate self-signed SSL certificate
+RUN mkdir -p /etc/nginx/ssl && \
+    openssl req -x509 -nodes -days 365 -newkey rsa:2048 \
+    -keyout /etc/nginx/ssl/nginx.key \
+    -out /etc/nginx/ssl/nginx.crt \
+    -subj "/C=MA/ST=BG/L=BenGuerir/O=1337/CN=tkerroum.42.fr"
 
-COPY ./conf/nginx.conf /etc/nginx/nginx.conf
-COPY ./tools/script.sh /tmp/script.sh
+COPY conf/nginx.conf /etc/nginx/nginx.conf
 
-RUN chmod +x /tmp/script.sh
+EXPOSE 443
 
-CMD [ "/tmp/script.sh" ]
+CMD ["nginx", "-g", "daemon off;"]
