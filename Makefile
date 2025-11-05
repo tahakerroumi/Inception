@@ -4,7 +4,7 @@ build:
 
 # up create and start containers 
 up: 
-	@docker compose -f srcs/docker-compose.yml up -d 
+	@docker compose -f srcs/docker-compose.yml up -d --pull never
 
 # stop and remove all containers, networks, and resources created by up
 down:
@@ -23,6 +23,8 @@ clean:
 	@docker compose -f srcs/docker-compose.yml down -v --rmi all
 
 restart: down up
+
+re: fclean up
 
 fclean: down clean
 	@docker system prune --all --volumes -f

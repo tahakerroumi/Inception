@@ -1,26 +1,44 @@
 services:
   mariadb:
     build: ./requirements/mariadb
-    image: mariadb
+    image: mariadb:inception
     container_name: mariadb
     env_file:
       - .env
+    volumes:
+      - /home/tkerroum/data/mariadb:/var/lib/mysql
+    networks:
+      - inception  # Should be an array
     restart: always
+
   wordpress:
     build: ./requirements/wordpress
-    image: wordpress
+    image: wordpress:inception
     container_name: wordpress
     env_file:
       - .env
+    volumes:
+      - /home/tkerroum/data/wordpress:/var/www/html
+    networks:
+      - inception  # Should be an array
+    restart: always
     depends_on:
       - mariadb
-    restart: always
+
   nginx:
     build: ./requirements/nginx
-    image: nginx
     container_name: nginx
+    image: nginx:inception
     ports:
       - "443:443"
+    volumes:
+      - /home/tkerroum/data/wordpress:/var/www/html
+    networks:
+      - inception  # Should be an array
+    restart: always
     depends_on:
       - wordpress
-    restart: always
+
+networks:
+  inception:
+  
