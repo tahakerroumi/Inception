@@ -1,18 +1,19 @@
 #!/bin/bash
-set -e
+# set -e
 cd /var/www/
 
-if [ ! -f /var/www/html/index.php ]; then
+echo "Waiting for MariaDB..."
+until mariadb-admin -h mariadb -u $MARIADB_USER -p"$MARIADB_PASSWORD" ping -s ; do
+    sleep 1
+done
+
+if [ ! -f /var/www/index.php ]; then
     echo "WordPress files not found, downloading..."
     wp core download --allow-root
-    chown -R www-data:www-data /var/www/html
+    chown -R www-data:www-data /var/www/
 fi
 
-if [ ! -f /var/www/html/wp-config.php ]; then
-    echo "Waiting for MariaDB..."
-    until mariadb-admin -h mariadb -u $MARIADB_USER -p"$MARIADB_PASSWORD" ping -s ; do
-        sleep 1
-    done
+if [ ! -f /var/www/wp-config.php ]; then
     
     echo "Creating wp-config.php..."
     wp config create \

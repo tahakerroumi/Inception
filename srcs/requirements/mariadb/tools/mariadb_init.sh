@@ -1,13 +1,15 @@
 #!/bin/bash
 
-set -e
+# set -e
 
-if [ ! -d "/var/lib/mysql/${MARIADB_DATABASE}" ]; then
+if [ $(ls -A "/var/lib/mysql" | wc -l) -eq 0 ]; then
 
-mariadbd-safe &
+mysql_install_db --user=mysql --datadir=/var/lib/mysql
+
+mysqld_safe --user=mysql --datadir=/var/lib/mysql &
 
 until mariadb-admin ping -s; do
-    sleep 1
+    sleep 2
 done
 
 mariadb -u root <<EOF

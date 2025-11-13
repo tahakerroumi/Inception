@@ -10,3 +10,4 @@ if [ ! -f "$SSL_DIR/$DOMAIN.crt" ]; then
     -days 365 \
     -subj "/C=MA/ST=Marrakech-Safi/L=Benguerir/O=1337/OU=student/CN=$DOMAIN"
 fi
+

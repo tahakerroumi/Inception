@@ -4,15 +4,15 @@ RUN apt-get update -y && apt-get upgrade -y
 
 RUN apt-get install -y php7.4-fpm php7.4-mysql mariadb-client curl
 
-RUN curl -O https://raw.githubusercontent.com/wp-cli/builds/gh-pages/phar/wp-cli.phar  \
-        && chmod +x wp-cli.phar \ 
-            && mv wp-cli.phar /usr/local/bin/wp
+RUN curl -O https://raw.githubusercontent.com/wp-cli/builds/gh-pages/phar/wp-cli.phar  && chmod +x wp-cli.phar && mv wp-cli.phar /usr/local/bin/wp
+
+RUN mkdir -p /var/www/
 
 WORKDIR /var/www/
 
-# RUN wp core download --allow-root
+RUN wp core download --allow-root
 
-# RUN chown -R www-data:www-data /var/www/
+RUN chown -R www-data:www-data /var/www/
 
 RUN mkdir -p /run/php/
 
