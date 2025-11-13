@@ -1,6 +1,6 @@
 #!/bin/bash
 
-DOMAIN="taha.42.fr"
+DOMAIN="tkerroum.42.fr"
 SSL_DIR="/etc/nginx/ssl"
 
 if [ ! -f "$SSL_DIR/$DOMAIN.crt" ]; then

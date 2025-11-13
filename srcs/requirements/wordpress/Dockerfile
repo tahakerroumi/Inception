@@ -8,7 +8,11 @@ RUN curl -O https://raw.githubusercontent.com/wp-cli/builds/gh-pages/phar/wp-cli
         && chmod +x wp-cli.phar \ 
             && mv wp-cli.phar /usr/local/bin/wp
 
-RUN wp core download --allow-root
+WORKDIR /var/www/
+
+# RUN wp core download --allow-root
+
+# RUN chown -R www-data:www-data /var/www/
 
 RUN mkdir -p /run/php/
 

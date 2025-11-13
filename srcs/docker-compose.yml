@@ -2,54 +2,43 @@ services:
   mariadb:
     build: ./requirements/mariadb
     container_name: mariadb
+    image: mariadb:inception
     env_file:
       - .env
     volumes:
-      - mariadb_volume:/var/lib/mysql
+      - /home/tkerroum/data/mariadb:/var/lib/mysql
     networks:
       - inception
     restart: always
+
   wordpress:
     build: ./requirements/wordpress
     container_name: wordpress
-    depends_on:
-      - mariadb
+    image: wordpress:inception
     env_file:
       - .env
     volumes:
-      - wordpress_volume:/var/www
+      - /home/tkerroum/data/wordpress:/var/www/html
     networks:
       - inception
     restart: always
+    depends_on:
+      - mariadb
+
   nginx:
     build: ./requirements/nginx
+    image: nginx:inception
     container_name: nginx
-    depends_on:
-      - wordpress
     ports:
       - "443:443"
     volumes:
-      - wordpress_volume:/var/www
-    env_file:
-      - .env
+      - /home/tkerroum/data/wordpress:/var/www/html
     networks:
       - inception
     restart: always
-
-volumes:
-  mariadb_volume:
-    name: mariadb_data
-    driver_opts:
-      type: none
-      o: bind
-      device: /home/tkerroum/data/mariadb
-  wordpress_volume:
-    name: wordpress_data
-    driver_opts:
-      type: none
-      o: bind
-      device: /home/tkerroum/data/wordpress
+    depends_on:
+      - wordpress
 
 networks:
   inception:
-    name: inception_network
+  
