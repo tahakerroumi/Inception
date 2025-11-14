@@ -1,5 +1,7 @@
 #!/bin/bash
-# set -e
+
+set -e
+
 cd /var/www/
 
 echo "Waiting for MariaDB..."

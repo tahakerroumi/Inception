@@ -1,6 +1,6 @@
 #!/bin/bash
 
-# set -e
+set -e
 
 if [ $(ls -A "/var/lib/mysql" | wc -l) -eq 0 ]; then
 

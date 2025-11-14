@@ -1,18 +1,22 @@
+# build builds images no cache is ignoring any cached image layers and building images from scratch
+build:
+	@docker compose -f srcs/docker-compose.yml build --no-cache
+	@docker compose -f srcs/docker-compose.yml up -d
 
-BASE_DIR = /home/tkerroum/data
-MARIADB_DIR = $(BASE_DIR)/mariadb
-WORDPRESS_DIR = $(BASE_DIR)/wordpress
+# up create and start containers 
+# up: 
+# 	@docker compose -f srcs/docker-compose.yml up -d
 
-all:
-	docker compose -f srcs/docker-compose.yml up -d --build
-
+# stop and remove all containers, networks, and resources created by up
 down:
-	docker compose -f srcs/docker-compose.yml down
+	@docker compose -f srcs/docker-compose.yml down -v --rmi all
 
-up:
-	docker compose -f srcs/docker-compose.yml up -d
+# shows the status of all containers
+ps:
+	@docker compose -f srcs/docker-compose.yml ps
 
-clean:
-	docker system prune -af
+# shows Logs in a container example the output messages
+logs:
+	@docker compose -f srcs/docker-compose.yml logs -f
 
-re: down clean all
+re: down up
