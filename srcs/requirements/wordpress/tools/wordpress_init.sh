@@ -2,8 +2,6 @@
 
 set -e
 
-cd /var/www/
-
 echo "Waiting for MariaDB..."
 until mariadb-admin -h mariadb -u $MARIADB_USER -p"$MARIADB_PASSWORD" ping -s ; do
     sleep 1
