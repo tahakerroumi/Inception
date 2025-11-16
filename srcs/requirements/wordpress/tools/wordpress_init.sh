@@ -4,7 +4,7 @@ set -e
 
 echo "Waiting for MariaDB..."
 until mariadb-admin -h mariadb -u $MARIADB_USER -p"$MARIADB_PASSWORD" ping -s ; do
-    sleep 1
+    sleep 2
 done
 
 if [ ! -f /var/www/index.php ]; then

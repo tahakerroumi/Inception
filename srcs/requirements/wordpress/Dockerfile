@@ -14,10 +14,10 @@ RUN chown -R www-data:www-data /var/www/
 
 RUN mkdir -p /run/php/
 
+COPY conf/www.conf /etc/php/7.4/fpm/pool.d/www.conf
+
 COPY tools/wordpress_init.sh /var/wordpress_init.sh
 
 RUN chmod +x /var/wordpress_init.sh
-
-COPY conf/www.conf /etc/php/7.4/fpm/pool.d/www.conf
 
 CMD [ "/var/wordpress_init.sh" ]
