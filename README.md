@@ -313,7 +313,6 @@ docker-compose up
 - [How Docker Works](https://devopscube.com/what-is-docker/)
 - [Docker Deep Dive](https://www.google.com/search?q=docker+deep+dive+pdf&rlz=1C5CHFA_enMA1167MA1167&oq=&gs_lcrp=EgZjaHJvbWUqBggCEEUYOzIKCAAQABjjAhiABDIHCAEQLhiABDIGCAIQRRg7MgYIAxBFGEAyBggEEEUYOTIMCAUQABgUGIcCGIAEMgcIBhAAGIAEMgYIBxBFGD3SAQg1MTYyajBqNKgCALACAQ&sourceid=chrome&ie=UTF-8)
 - [Docker Compose Documentation](https://docs.docker.com/compose/)
-- [Open Container Initiative (OCI)](https://opencontainers.org/)
 - [containerd Documentation](https://containerd.io/)
 - [Docker Networking](https://www.geeksforgeeks.org/devops/basics-of-docker-networking/)
 
